@@ -1,4 +1,5 @@
 /* General styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +26,11 @@ body {
   position: relative;
 }
 
-/* Header styles*/
+/* Header styles */
+
 header {
   width: 100%;
-  padding: 14px 16px 0px;
+  padding: 14px 16px 0 14px;
 }
 
 nav {
@@ -40,6 +42,7 @@ nav {
 }
 
 /* Body styles */
+
 main {
   width: 100%;
   padding: 16px;
@@ -72,13 +75,13 @@ h1 {
   gap: 12px;
 }
 
-.project-details h5:first-child {
-  color: #344563;
-}
-
 .project-details h5 {
   color: #7a869a;
   font-weight: 600px;
+}
+
+.project-details h5:first-child {
+  color: #344563;
 }
 
 .project-description {
@@ -106,9 +109,8 @@ h1 {
   background: transparent;
   border: 1px solid #396df2;
   font-size: 17px;
-  letter-spacing: 0.03em;
   font-weight: 500;
   padding: 12px;
-  margin: 24px 0px 12px;
+  margin: 24px 0 12px;
   border-radius: 8px;
 }
