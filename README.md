@@ -22,9 +22,7 @@ To get a local copy up and running follow these simple example steps.
 - Press cmd + shift + P and type gitclone and choose the first option.
 - Paste the repo link inside the field and press enter.
 
-## Authors
-
-👤 **Author1**
+## Author
 
 - GitHub: [@githubhandle](https://github.com/z4cope)
 - Twitter: [@twitterhandle](https://twitter.com/mokhaledev)

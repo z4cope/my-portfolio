@@ -89,6 +89,10 @@ h1 {
   margin-bottom: 136px;
 }
 
-.my-used-techs img {
-  color: #6070ff;
+.my-social a {
+  transition: all 0.3s ease;
+}
+
+.my-social a:hover {
+  transform: translateY(-0.3rem);
 }
