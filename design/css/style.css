@@ -15,27 +15,27 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  width: 327px;
+  width: 375px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: auto;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
   position: relative;
+  background-color: #e5e5e5;
 }
 
 /* Header styles */
 
 header {
   width: 100%;
-  padding: 14px 16px 0 14px;
+  padding: 16px 35px 16px 24px;
+  background: #fff;
 }
 
 nav {
   width: 100%;
-  min-height: 8vh;
+  min-height: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,17 @@ nav {
 
 main {
   width: 100%;
-  padding: 16px;
+  display: flex;
+  flex-direction: stretch;
+}
+
+#hero-section {
+  background: url("../assets/header-shapes\ mobile@2x.svg") no-repeat;
+  background-position: center;
+  border-bottom-left-radius: 70px;
+  background-color: #fff;
+  padding: 24px;
+  min-height: 596px;
 }
 
 h1 {
@@ -53,64 +63,32 @@ h1 {
   font-size: 18px;
   line-height: 20px;
   margin: 12px 0;
+  color: #6070ff;
 }
 
-#design-props {
-  width: 100%;
-}
-
-.project-img {
-  width: 100%;
-}
-
-.project-name {
-  width: 700;
-  font-size: 32px;
-  line-height: 44px;
+.my-name {
+  font-weight: 700;
+  font-size: 40px;
   color: #172b4d;
+  margin-top: 114px;
+  line-height: 52px;
+  max-width: 327px;
 }
 
-.project-details {
-  display: flex;
-  gap: 12px;
-}
-
-.project-details h5 {
-  color: #7a869a;
-  font-weight: 600px;
-}
-
-.project-details h5:first-child {
-  color: #344563;
-}
-
-.project-description {
+.my-description {
   margin: 12px 0;
   font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
 }
 
-.project-used-techs {
+.my-social {
   display: flex;
-  gap: 6px;
+  gap: 20px;
+  margin-top: 12px;
+  margin-bottom: 136px;
 }
 
-.project-used-techs h6 {
+.my-used-techs img {
   color: #6070ff;
-  background: #ebebff;
-  border-radius: 8px;
-  padding: 4px 12px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-.project-button {
-  color: #396df2;
-  background: transparent;
-  border: 1px solid #396df2;
-  font-size: 17px;
-  font-weight: 500;
-  padding: 12px;
-  margin: 24px 0 12px;
-  border-radius: 8px;
 }
