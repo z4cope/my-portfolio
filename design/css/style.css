@@ -4,12 +4,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   width: 327px;
@@ -28,6 +30,7 @@ header {
   width: 100%;
   padding: 14px 16px 0px;
 }
+
 nav {
   width: 100%;
   min-height: 8vh;
@@ -41,43 +44,53 @@ main {
   width: 100%;
   padding: 16px;
 }
+
 h1 {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   margin: 12px 0;
 }
+
 #design-props {
   width: 100%;
 }
+
 .project-img {
   width: 100%;
 }
+
 .project-name {
   width: 700;
   font-size: 32px;
   line-height: 44px;
   color: #172b4d;
 }
+
 .project-details {
   display: flex;
   gap: 12px;
 }
+
 .project-details h5:first-child {
   color: #344563;
 }
+
 .project-details h5 {
   color: #7a869a;
   font-weight: 600px;
 }
+
 .project-description {
   margin: 12px 0;
   font-weight: 400;
 }
+
 .project-used-techs {
   display: flex;
   gap: 6px;
 }
+
 .project-used-techs h6 {
   color: #6070ff;
   background: #ebebff;
@@ -87,6 +100,7 @@ h1 {
   font-size: 12px;
   line-height: 16px;
 }
+
 .project-button {
   color: #396df2;
   background: transparent;
