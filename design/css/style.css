@@ -52,6 +52,10 @@ main {
   min-height: 596px;
 }
 
+.logo-link {
+  text-decoration: none;
+}
+
 .logo {
   font-weight: 700;
   font-size: 18px;
