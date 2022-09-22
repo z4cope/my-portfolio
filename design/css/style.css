@@ -124,3 +124,140 @@ nav {
 .about-my-social li:hover {
   transform: translateY(-0.3rem);
 }
+#works-container {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 88px;
+  justify-items: center;
+  margin: 114px 0;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #dfe1e6;
+  width: 327px;
+  min-height: 552px;
+}
+
+.project-img {
+  width: 100%;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 12px 0;
+}
+
+.project-details {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-details h5 {
+  color: #7a869a;
+  font-weight: 600px;
+}
+
+.project-details h5:first-child {
+  color: #344563;
+}
+
+.project-description {
+  margin: 12px 0;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.project-used-techs {
+  display: flex;
+  gap: 6px;
+}
+
+.call-to-action-btns {
+  color: #396df2;
+  background: transparent;
+  border: 1px solid #396df2;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 12px;
+  margin: 24px 0 12px;
+  border-radius: 8px;
+  letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+}
+
+.call-to-action-btns:hover {
+  color: #fff;
+  background-color: #3265e5;
+}
+
+#about-container {
+  border-radius: 0;
+  border-top-right-radius: 70px;
+  background: none;
+  background-color: #fff;
+}
+
+.about-my-social {
+  padding: 11px;
+  margin: 12px 0;
+}
+
+.about-btn {
+  margin: 0;
+}
+
+.about-skills {
+  margin: 58px 0 114px;
+}
+
+.slide {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.slide.active {
+  border: none;
+}
+
+.slide-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 72px;
+  padding: 24px 0 24px 12px;
+}
+
+.slide-header h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
+
+.slide-header .arrow {
+  width: 12px;
+  height: 6px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.slide-content {
+  padding: 12px;
+}
+
+.slide-content li:last-child {
+  margin-bottom: 0;
+}
+
+.slide-content li h6 {
+  color: #253858;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
