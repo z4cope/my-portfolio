@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Mobile portfolio</title>
   </head>
+
   <body>
     <header>
       <nav>
-        <a class="logo-link" href="#"><h2 class="logo">My Logo</h2></a>
+        <a class="logo-link" href="#">
+          <h2 class="logo">My Logo</h2>
+        </a>
         <a href="#"><img src="./assets/Union.svg" alt="burger-menu" /></a>
       </nav>
     </header>
@@ -235,5 +238,52 @@
         </ul>
       </section>
     </main>
+    <footer class="section-contact">
+      <div class="form-container">
+        <h2>Contact me</h2>
+        <p>
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it
+        </p>
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xlevbznz"
+          method="POST"
+          aria-placeholder="First and second name"
+        >
+          <div class="input-control">
+            <input
+              id="input-name"
+              type="text"
+              maxlength="30"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+
+          <div class="input-control">
+            <input
+              type="email"
+              id="user-email"
+              placeholder="jhon-Doe@gmail.com"
+              required
+            />
+          </div>
+          <div class="input-control">
+            <textarea
+              name="message"
+              id="user-message"
+              cols="30"
+              rows="10"
+              placeholder="Write your message here"
+              maxlength="500"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Get In Touch</button>
+        </form>
+      </div>
+    </footer>
   </body>
 </html>
