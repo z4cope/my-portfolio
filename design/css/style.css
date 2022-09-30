@@ -42,6 +42,10 @@ nav {
   align-items: center;
 }
 
+.desk-top-menu {
+  display: none;
+}
+
 /* Body styles */
 
 #hero-container,
@@ -146,6 +150,10 @@ nav {
   width: 100%;
 }
 
+.desktop-img {
+  display: none;
+}
+
 .project-name {
   font-weight: 700;
   font-size: 32px;
@@ -173,6 +181,7 @@ nav {
   margin: 12px 0;
   font-weight: 400;
   margin-bottom: 12px;
+  color: #344563;
 }
 
 .project-used-techs {
@@ -183,7 +192,7 @@ nav {
 .call-to-action-btns {
   color: #396df2;
   background: transparent;
-  border: 1px solid #396df2;
+  border: 1px solid #6070ff;
   font-size: 17px;
   font-weight: 500;
   padding: 12px;
@@ -195,7 +204,7 @@ nav {
 
 .call-to-action-btns:hover {
   color: #fff;
-  background-color: #3265e5;
+  background-color: #6070ff;
 }
 
 #about-container {
@@ -347,6 +356,25 @@ nav {
 }
 
 @media screen and (min-width: 686px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .desk-top-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 259px;
+    height: 40px;
+  }
+
+  .desk-top-menu li a {
+    color: #344563;
+  }
+
+  nav {
+    padding: 0 154px;
+  }
+
   #hero-container,
   #about-container,
   #works-container,
@@ -376,6 +404,18 @@ nav {
   .project-card {
     display: flex;
     width: 100%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    gap: 46px;
+  }
+
+  .project-card:hover {
+    border: 2px solid #a7aeff;
+  }
+
+  .project-card:hover .call-to-action-btns {
+    background-color: #6070ff;
+    color: #fff;
   }
 
   .project-card .project-link-wrapper {
@@ -389,8 +429,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 0 46px;
     width: 100%;
+    padding-left: 46px;
   }
 
   .first-project {
@@ -413,5 +453,53 @@ nav {
 
   .mobile-img {
     display: none;
+  }
+
+  .desktop-img {
+    display: initial;
+  }
+
+  #about-container {
+    display: flex;
+    padding: 142px 142px 0 142px;
+  }
+
+  .about-call-to-action {
+    flex: 1 1 0;
+  }
+
+  .about-call-to-action p {
+    max-width: 447px;
+  }
+
+  .about-skills {
+    flex: 1 1 0;
+  }
+
+  #about-container .slide-content {
+    display: flex;
+    gap: 12px;
+  }
+
+  .slide-content li {
+    width: 122px;
+    height: 120px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-contact {
+    width: 100vw;
+  }
+
+  .form-container {
+    padding: 142px 320px;
+    background: #6070ff
+      url("../assets/contact\ form\ background\ shapes@2x.png");
+    background-size: cover;
+  }
+
+  .contact-form {
+    width: 447px;
   }
 }
