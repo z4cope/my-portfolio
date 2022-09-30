@@ -66,7 +66,6 @@ nav {
   line-height: 20px;
   margin: 12px 0;
   color: #6070ff;
-
   animation: rotateLogo 1.5s linear;
 }
 
@@ -447,6 +446,11 @@ nav {
     color: #fff;
   }
 
+  .desktop-img {
+    display: initial;
+    transition: all 0.3s ease;
+  }
+
   .project-card:hover .desktop-img {
     transform: scale(1.1);
   }
@@ -488,11 +492,6 @@ nav {
     display: none;
   }
 
-  .desktop-img {
-    display: initial;
-    transition: all 0.3s ease;
-  }
-
   #about-container {
     display: flex;
     padding: 142px 142px 0 142px;
@@ -529,7 +528,8 @@ nav {
 
   .form-container {
     padding: 142px 320px;
-    background: #6070ff
+    background:
+      #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
