@@ -66,6 +66,17 @@ nav {
   line-height: 20px;
   margin: 12px 0;
   color: #6070ff;
+  animation: rotateLogo 1.5s linear;
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .my-name {
@@ -355,6 +366,17 @@ nav {
   border: 1px solid #fff;
 }
 
+/* Form translate placeholder animation */
+.input-control input::placeholder,
+.input-control textarea::placeholder {
+  transition: transform 0.5s;
+}
+
+.input-control input:hover::placeholder,
+.input-control textarea:hover::placeholder {
+  transform: translateX(5px);
+}
+
 @media screen and (min-width: 686px) {
   .burger-menu {
     display: none;
@@ -411,15 +433,26 @@ nav {
     border: 2px solid transparent;
     transition: all 0.3s ease;
     gap: 46px;
+    overflow: hidden;
   }
 
   .project-card:hover {
     border: 2px solid #a7aeff;
+    transform: translateY(-1rem);
   }
 
   .project-card:hover .call-to-action-btns {
     background-color: #6070ff;
     color: #fff;
+  }
+
+  .desktop-img {
+    display: initial;
+    transition: all 0.3s ease;
+  }
+
+  .project-card:hover .desktop-img {
+    transform: scale(1.1);
   }
 
   .project-card .project-link-wrapper {
@@ -459,10 +492,6 @@ nav {
     display: none;
   }
 
-  .desktop-img {
-    display: initial;
-  }
-
   #about-container {
     display: flex;
     padding: 142px 142px 0 142px;
@@ -486,6 +515,11 @@ nav {
     height: 120px;
     align-items: flex-start;
     flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .slide-content li:hover {
+    transform: translateY(-0.5rem);
   }
 
   .section-contact {
