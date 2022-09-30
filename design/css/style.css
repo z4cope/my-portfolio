@@ -393,6 +393,10 @@ nav {
     max-width: 350px;
   }
 
+  .about-call-to-action p {
+    max-width: 447px;
+  }
+
   #hero-container p {
     width: 70%;
   }
@@ -468,10 +472,6 @@ nav {
     flex: 1 1 0;
   }
 
-  .about-call-to-action p {
-    max-width: 447px;
-  }
-
   .about-skills {
     flex: 1 1 0;
   }
@@ -494,7 +494,8 @@ nav {
 
   .form-container {
     padding: 142px 320px;
-    background: #6070ff
+    background:
+      #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
