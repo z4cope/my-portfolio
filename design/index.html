@@ -13,14 +13,20 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Mobile portfolio</title>
   </head>
-
   <body>
     <header>
       <nav>
         <a class="logo-link" href="#">
           <h2 class="logo">My Logo</h2>
         </a>
-        <a href="#"><img src="./assets/Union.svg" alt="burger-menu" /></a>
+        <ul class="desk-top-menu">
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a class="burger-menu" href="#"
+          ><img src="./assets/Union.svg" alt="burger-menu"
+        /></a>
       </nav>
     </header>
     <main>
@@ -54,139 +60,171 @@
         </ul>
       </section>
       <section id="works-container">
-        <div class="project-card">
+        <a href="#" class="project-card first-project">
           <img
-            class="project-img"
-            src="./assets/Snapshoot Portfolio Tonic.svg"
+            class="project-img mobile-img"
+            src="./assets/Snapshoot Portfolio desktop.png"
+            alt="project-card"
+          />
+          <img
+            class="project-img desktop-img"
+            src="./assets/Snapshoot Portfolio desktop.png"
             alt=""
           />
-          <h2 class="project-name">Tonic</h2>
-          <div class="project-details">
-            <h5>CANOPY</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>Back End Dev</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>2015</h5>
+          <div class="works-content-container">
+            <h2 class="project-name">Tonic</h2>
+            <div class="project-details">
+              <h5>CANOPY</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>Back End Dev</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>2015</h5>
+            </div>
+            <p class="project-description">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
+            </p>
+            <ul class="project-used-techs">
+              <li>html</li>
+              <li>CSS</li>
+              <li>javascript</li>
+            </ul>
+            <button class="call-to-action-btns">See Projects</button>
           </div>
-          <p class="project-description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required.
-          </p>
-          <ul class="project-used-techs">
-            <li>html</li>
-            <li>CSS</li>
-            <li>javascript</li>
-          </ul>
-          <a href="#" class="call-to-action-btns">See Project</a>
-        </div>
-        <div class="project-card">
+        </a>
+
+        <a href="#" class="project-card second-project">
           <img
-            class="project-img"
+            class="project-img mobile-img"
             src="./assets/Snapshoot Portfolio.svg"
-            alt=""
+            alt="mobile project image"
           />
-          <h2 class="project-name">Multi-Post Stories</h2>
-          <div class="project-details">
-            <h5>CANOPY</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>Back End Dev</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>2015</h5>
-          </div>
-          <p class="project-description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required.
-          </p>
-          <ul class="project-used-techs">
-            <li>html</li>
-            <li>CSS</li>
-            <li>javascript</li>
-          </ul>
-          <a href="#" class="call-to-action-btns">See Project</a>
-        </div>
-        <div class="project-card">
           <img
-            class="project-img"
+            class="project-img desktop-img"
+            src="./assets/desktop-image-uber.png"
+            alt="desk top mobile image"
+          />
+          <div class="works-content-container">
+            <h2 class="project-name">Multi-Post Stories</h2>
+            <div class="project-details">
+              <h5>CANOPY</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>Back End Dev</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>2015</h5>
+            </div>
+            <p class="project-description">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
+            </p>
+            <ul class="project-used-techs">
+              <li>html</li>
+              <li>CSS</li>
+              <li>javascript</li>
+            </ul>
+            <button class="call-to-action-btns">See Project</button>
+          </div>
+        </a>
+
+        <a href="#" class="project-card third-project">
+          <img
+            class="project-img mobile-img"
             src="./assets/Snapshoot Portfolio-1.svg"
-            alt=""
+            alt="project-image"
           />
-          <h2 class="project-name">Multi-Post Stories</h2>
-          <div class="project-details">
-            <h5>CANOPY</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>Back End Dev</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>2015</h5>
-          </div>
-          <p class="project-description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required.
-          </p>
-          <ul class="project-used-techs">
-            <li>html</li>
-            <li>CSS</li>
-            <li>javascript</li>
-          </ul>
-          <a href="#" class="call-to-action-btns">See Project</a>
-        </div>
-        <div class="project-card">
           <img
-            class="project-img"
+            class="project-img desktop-img"
+            src="./assets/Snapshoot Portfolio.jpg"
+            alt="project-image"
+          />
+          <div class="works-content-container">
+            <h2 class="project-name">Multi-Post Stories</h2>
+            <div class="project-details">
+              <h5>CANOPY</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>Back End Dev</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>2015</h5>
+            </div>
+            <p class="project-description">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
+            </p>
+            <ul class="project-used-techs">
+              <li>html</li>
+              <li>CSS</li>
+              <li>javascript</li>
+            </ul>
+            <button class="call-to-action-btns">See Project</button>
+          </div>
+        </a>
+
+        <a href="#" class="project-card forth-project">
+          <img
+            class="project-img mobile-img"
             src="./assets/Snapshoot Portfolio.png"
             alt=""
           />
-          <h2 class="project-name">Multi-Post Stories</h2>
-          <div class="project-details">
-            <h5>CANOPY</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>Back End Dev</h5>
-            <img src="./assets/Counter.svg" alt="dot" />
-            <h5>2015</h5>
+          <img
+            class="project-img desktop-img"
+            src="./assets/multi-post-deksotp.png"
+            alt="project desktop image"
+          />
+          <div class="works-content-container">
+            <h2 class="project-name">Multi-Post Stories</h2>
+            <div class="project-details">
+              <h5>CANOPY</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>Back End Dev</h5>
+              <img src="./assets/Counter.svg" alt="dot" />
+              <h5>2015</h5>
+            </div>
+            <p class="project-description">
+              A daily selection of privately personalized reads; no accounts or
+              sign-ups required.
+            </p>
+            <ul class="project-used-techs">
+              <li>html</li>
+              <li>CSS</li>
+              <li>javascript</li>
+            </ul>
+            <button class="call-to-action-btns">See Project</button>
           </div>
-          <p class="project-description">
-            A daily selection of privately personalized reads; no accounts or
-            sign-ups required.
-          </p>
-          <ul class="project-used-techs">
-            <li>html</li>
-            <li>CSS</li>
-            <li>javascript</li>
-          </ul>
-          <a href="#" class="call-to-action-btns">See Project</a>
-        </div>
+        </a>
       </section>
       <section id="about-container">
-        <h1 class="my-name">About Myself</h1>
-        <p class="my-description">
-          Hello I’m a software developer! I can help you build a product ,
-          feature or website Look through some of my work and experience! If you
-          like what you see and have a project you need coded, don’t hestiate to
-          contact me.
-        </p>
-        <a class="my-email-link" href="#">LET’S CONNECT</a>
-        <ul class="about-my-social">
-          <li>
-            <a href="#"><img src="./assets/git.svg" alt="githb" /></a>
-          </li>
-          <li>
-            <a href="#"
-              ><img src="./assets/Linkedin-icon.svg" alt="Linkedin"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./assets/awards.svg" alt="awards" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./assets/twitter.svg" alt="twitter" /></a>
-          </li>
+        <div class="about-call-to-action">
+          <h1 class="my-name">About Myself</h1>
+          <p class="my-description">
+            Hello I’m a software developer! I can help you build a product ,
+            feature or website Look through some of my work and experience! If
+            you like what you see and have a project you need coded, don’t
+            hestiate to contact me.
+          </p>
+          <a class="my-email-link" href="#">LET’S CONNECT</a>
+          <ul class="about-my-social">
+            <li>
+              <a href="#"><img src="./assets/git.svg" alt="githb" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./assets/Linkedin-icon.svg" alt="Linkedin"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/awards.svg" alt="awards" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./assets/twitter.svg" alt="twitter" /></a>
+            </li>
 
-          <li>
-            <a href="#"><img src="./assets/meduim.svg" alt="medium" /></a>
-          </li>
-        </ul>
+            <li>
+              <a href="#"><img src="./assets/meduim.svg" alt="medium" /></a>
+            </li>
+          </ul>
 
-        <a class="call-to-action-btns about-btn" href="#">Get my resume</a>
-
+          <a class="call-to-action-btns about-btn" href="#">Get my resume</a>
+        </div>
         <ul class="about-skills">
           <li class="slide active">
             <div class="slide-header">
