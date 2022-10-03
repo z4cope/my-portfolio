@@ -8,6 +8,10 @@
 - CSS
 - Linters
 
+## Project Link on Github pages
+
+https://z4cope.github.io/Mobile-portfolio/
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
