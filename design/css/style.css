@@ -179,12 +179,14 @@ nav {
   margin-bottom: 12px;
 }
 
-.project-details h5 {
+.project-details h3 {
   color: #7a869a;
   font-weight: 600px;
+  font-size: 13px;
+  line-height: 16px;
 }
 
-.project-details h5:first-child {
+.project-details h3:first-child {
   color: #344563;
 }
 
@@ -332,6 +334,14 @@ nav {
   width: 100%;
 }
 
+.label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -342,6 +352,21 @@ nav {
 
 .contact-form input {
   padding: 15px 0 15px 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #a7b0ff;
+}
+
+.contact-form input:focus::placeholder,
+.contact-form textarea:focus::placeholder {
+  background-color: #a7b0ff;
+  transform: translateX(5px);
+}
+
+input:invalid {
+  border: 2px solid red;
 }
 
 .contact-form button {
@@ -434,6 +459,7 @@ nav {
     transition: all 0.3s ease;
     gap: 46px;
     overflow: hidden;
+    flex-wrap: wrap;
   }
 
   .project-card:hover {
@@ -449,16 +475,20 @@ nav {
   .desktop-img {
     display: initial;
     transition: all 0.3s ease;
+    flex: 1 1 0;
   }
 
   .project-card:hover .desktop-img {
     transform: scale(1.1);
   }
 
-  .project-card .project-link-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .project-details {
+    flex-wrap: wrap;
+  }
+
+  .project-details h3 {
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .works-content-container {
@@ -468,6 +498,7 @@ nav {
     align-items: flex-start;
     width: 100%;
     padding-left: 46px;
+    flex: 1 1 0;
   }
 
   .first-project {
@@ -528,8 +559,7 @@ nav {
 
   .form-container {
     padding: 142px 320px;
-    background:
-      #6070ff
+    background: #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
