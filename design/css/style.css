@@ -354,6 +354,15 @@ nav {
   padding: 15px 0 15px 16px;
 }
 
+input:invalid {
+  border: 2px solid red;
+}
+
+.input-control input::placeholder,
+.input-control textarea::placeholder {
+  transition: transform 0.5s;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   background-color: #a7b0ff;
@@ -363,10 +372,6 @@ nav {
 .contact-form textarea:focus::placeholder {
   background-color: #a7b0ff;
   transform: translateX(5px);
-}
-
-input:invalid {
-  border: 2px solid red;
 }
 
 .contact-form button {
@@ -392,10 +397,6 @@ input:invalid {
 }
 
 /* Form translate placeholder animation */
-.input-control input::placeholder,
-.input-control textarea::placeholder {
-  transition: transform 0.5s;
-}
 
 .input-control input:hover::placeholder,
 .input-control textarea:hover::placeholder {
@@ -559,7 +560,8 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background: #6070ff
+    background:
+      #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
