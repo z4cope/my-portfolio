@@ -614,7 +614,8 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background: #6070ff
+    background:
+      #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
