@@ -32,6 +32,9 @@ header {
   width: 100%;
   padding: 16px 35px 16px 24px;
   background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -56,6 +59,8 @@ nav {
   flex-direction: column;
   gap: 40px;
   padding: 106px 96px 0 28px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
 }
 
 .desk-top-menu a {
@@ -599,7 +604,8 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background: #6070ff
+    background:
+      #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
