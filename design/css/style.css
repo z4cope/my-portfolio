@@ -43,7 +43,32 @@ nav {
 }
 
 .desk-top-menu {
-  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #6070ff;
+  mix-blend-mode: multiply;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding: 106px 96px 0 28px;
+}
+
+.desk-top-menu a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 62px;
+  right: 38px;
 }
 
 /* Body styles */
@@ -413,10 +438,18 @@ input:invalid {
     justify-content: space-between;
     width: 259px;
     height: 40px;
+    background-color: transparent;
+    backdrop-filter: none;
+    position: initial;
+    flex-direction: row;
+    padding: 0;
   }
 
   .desk-top-menu li a {
     color: #344563;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   nav {
@@ -560,8 +593,7 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background:
-      #6070ff
+    background: #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
