@@ -49,8 +49,7 @@ nav {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: #6070ff;
-  mix-blend-mode: multiply;
+  background: rgba(96, 112, 255, 0.8);
   top: 0;
   left: 0;
   backdrop-filter: blur(10px);
@@ -604,8 +603,7 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background:
-      #6070ff
+    background: #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
