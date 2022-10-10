@@ -453,6 +453,17 @@ input:invalid {
     position: initial;
     flex-direction: row;
     padding: 0;
+    transform: translateX(0) !important;
+  }
+
+  .mob-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-menu-btn {
+    display: none;
   }
 
   .desk-top-menu li a {
