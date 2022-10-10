@@ -29,9 +29,12 @@ a {
 /* Header styles */
 
 header {
-  width: 375px;
+  width: 100%;
   padding: 16px 35px 16px 24px;
   background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 nav {
@@ -43,7 +46,33 @@ nav {
 }
 
 .desk-top-menu {
-  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(96, 112, 255, 0.8);
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 40px;
+  padding: 106px 96px 0 28px;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.desk-top-menu a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 62px;
+  right: 38px;
 }
 
 /* Body styles */
@@ -51,13 +80,20 @@ nav {
 #hero-container,
 #about-container {
   background: url("../assets/header-shapes\ mobile@2x.svg") no-repeat;
+  background-size: cover;
   background-position: center;
   border-bottom-left-radius: 70px;
   background-color: #fff;
   padding: 24px;
   min-height: 596px;
-  width: 375px;
+  width: 100%;
   margin: auto;
+}
+
+#hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo {
@@ -83,7 +119,6 @@ nav {
   font-weight: 700;
   font-size: 40px;
   color: #172b4d;
-  margin-top: 114px;
   line-height: 52px;
   max-width: 327px;
 }
@@ -289,7 +324,7 @@ nav {
 
 .section-contact {
   background-color: #fff;
-  width: 375px;
+  width: 100%;
 }
 
 .form-container {
@@ -413,10 +448,29 @@ input:invalid {
     justify-content: space-between;
     width: 259px;
     height: 40px;
+    background-color: transparent;
+    backdrop-filter: none;
+    position: initial;
+    flex-direction: row;
+    padding: 0;
+    transform: translateX(0) !important;
+  }
+
+  .mob-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-menu-btn {
+    display: none;
   }
 
   .desk-top-menu li a {
     color: #344563;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   nav {

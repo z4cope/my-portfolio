@@ -19,12 +19,15 @@
         <a class="logo-link" href="#">
           <h2 class="logo">My Logo</h2>
         </a>
-        <ul class="desk-top-menu">
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul id="mobile_navbar" class="desk-top-menu">
+          <li class="close-menu-btn" id="close-menu-btn">
+            <img src="./design/assets/closeBtn.svg" alt="close button" />
+          </li>
+          <li class="mob-nav-item"><a href="#works-container">Portfolio</a></li>
+          <li class="mob-nav-item"><a href="#about-container">About</a></li>
+          <li class="mob-nav-item"><a href="#contact-me">Contact</a></li>
         </ul>
-        <a class="burger-menu" href="#"
+        <a  id="toggle" class="burger-menu" href="#" 
           ><img src="./design/assets/Union.svg" alt="collapsed menu"
         /></a>
       </nav>
@@ -137,7 +140,7 @@
           <div class="works-content-container">
             <h2 class="project-name">Multi-Post Stories</h2>
             <div class="project-details">
-              <h3>CANOPY</h5>
+              <h3>CANOPY</h3>
               <img
                 src="./design/assets/Counter.svg"
                 alt="Decorative separator dot image"
@@ -304,7 +307,7 @@
       </section>
     </main>
 
-    <footer class="section-contact">
+    <footer id="contact-me" class="section-contact">
       <div class="form-container">
         <h2>Contact me</h2>
         <p>
@@ -319,7 +322,9 @@
           aria-placeholder="First and second name"
         >
           <div class="input-control">
-            <label for="input-name" class="label" id="input-name-label">Name</label>
+            <label for="input-name" class="label" id="input-name-label"
+              >Name</label
+            >
             <input
               id="input-name"
               type="text"
@@ -330,7 +335,9 @@
           </div>
 
           <div class="input-control">
-            <label for="user-email" class="label" id="input-email-label">Email</label>
+            <label for="user-email" class="label" id="input-email-label"
+              >Email</label
+            >
             <input
               type="email"
               id="user-email"
@@ -339,7 +346,9 @@
             />
           </div>
           <div class="input-control">
-            <label for="user-message" class="label" id="input-message-label">Message</label>
+            <label for="user-message" class="label" id="input-message-label"
+              >Message</label
+            >
             <textarea
               name="message"
               id="user-message"
@@ -354,5 +363,6 @@
         </form>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
