@@ -1,27 +1,27 @@
-import data from './cardsData.js';
+import data from "./cardsData.js";
 
-const worksSection = document.getElementById('works-container');
-const closeMenuBtn = document.getElementById('close-menu-btn');
-const navBar = document.getElementById('mobile_navbar');
-const toggleBtn = document.getElementById('toggle');
-let mobNavItems = document.getElementsByClassName('mob-nav-item');
+const worksSection = document.getElementById("works-container");
+const closeMenuBtn = document.getElementById("close-menu-btn");
+const navBar = document.getElementById("mobile_navbar");
+const toggleBtn = document.getElementById("toggle");
+let mobNavItems = document.getElementsByClassName("mob-nav-item");
 mobNavItems = Array.prototype.slice.call(mobNavItems);
 
-toggleBtn.addEventListener('click', () => {
-  navBar.style.transform = 'translateX(0)';
+toggleBtn.addEventListener("click", () => {
+  navBar.style.transform = "translateX(0)";
 });
 
-closeMenuBtn.addEventListener('click', () => {
-  navBar.style.transform = 'translateX(-100%)';
+closeMenuBtn.addEventListener("click", () => {
+  navBar.style.transform = "translateX(-100%)";
 });
 
 mobNavItems.forEach((mobNavItem) => {
-  mobNavItem.addEventListener('click', () => {
-    navBar.style.transform = 'translateX(-100%)';
+  mobNavItem.addEventListener("click", () => {
+    navBar.style.transform = "translateX(-100%)";
   });
 });
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const mobImg = [];
   const desktopImage = [];
   const projectNames = [];
@@ -74,24 +74,24 @@ window.addEventListener('DOMContentLoaded', () => {
   </article>`;
   });
 
-  const projectCards = document.getElementsByClassName('project-card');
-  response = response.join('');
+  const projectCards = document.getElementsByClassName("project-card");
+  response = response.join("");
   worksSection.innerHTML = response;
 
-  const modalContainer = document.createElement('div');
-  modalContainer.classList.add('modal-container');
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
+  const modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal-container");
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
   modalContainer.append(modal);
   worksSection.append(modalContainer);
-  modalContainer.setAttribute('id', 'modal-container');
+  modalContainer.setAttribute("id", "modal-container");
 
   Array.prototype.slice.call(projectCards).forEach((eachCard, index) => {
     const cardBtn = eachCard.childNodes[5].childNodes[9];
 
-    cardBtn.addEventListener('click', () => {
-      document.body.classList.add('stop-scrolling');
-      modalContainer.style.transform = 'translateX(0)';
+    cardBtn.addEventListener("click", () => {
+      document.body.classList.add("stop-scrolling");
+      modalContainer.style.transform = "translateX(0)";
       modal.innerHTML = `
       <img id="close-modal" src="./design/assets/close-modal.svg" />
       <h2 class="project-name">${projectNames[index]}</h2>
@@ -118,35 +118,38 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
       `;
-      const closeBtn = document.getElementById('close-modal');
-      closeBtn.addEventListener('click', () => {
-        modalContainer.style.transform = 'translateX(-100%)';
-        document.body.classList.remove('stop-scrolling');
+      const closeBtn = document.getElementById("close-modal");
+      closeBtn.addEventListener("click", () => {
+        modalContainer.style.transform = "translateX(-100%)";
+        document.body.classList.remove("stop-scrolling");
       });
     });
   });
 });
 
-const userForm = document.getElementsByTagName('form')[0];
-const userEmail = document.getElementById('user-email');
+const userForm = document.getElementsByTagName("form")[0];
+const userEmail = document.getElementById("user-email");
 let validValue = false;
-const messageContainer = document.getElementById('message-box');
+const messageContainer = document.getElementById("message-box");
+let validEmailValue;
 
-userEmail.addEventListener('input', (e) => {
-  const validEmailValue = e.target.value.toLowerCase();
-  if (validEmailValue === e.target.value.toLowerCase()) {
+userEmail.addEventListener("input", (e) => {
+  validEmailValue = e.target.value.toLowerCase();
+  if (validEmailValue === e.target.value) {
     validValue = true;
+    console.log("true");
   } else {
     validValue = false;
+    console.log("false");
   }
 });
 
-userForm.addEventListener('submit', (e) => {
+userForm.addEventListener("submit", (e) => {
   if (!validValue) {
-    const message = document.createElement('p');
-    message.innerText = 'Please fill your email properly';
+    const message = document.createElement("p");
+    message.innerText = "Please fill your email properly in lower case";
     messageContainer.append(message);
-    messageContainer.style.opacity = '1';
+    messageContainer.style.opacity = "1";
     e.preventDefault();
   }
 });
