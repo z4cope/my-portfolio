@@ -127,14 +127,13 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-let userForm = document.getElementsByTagName('form');
-userForm = userForm[0];
-let userEmail = document.getElementById('user-email');
+const userForm = document.getElementsByTagName('form')[0];
+const userEmail = document.getElementById('user-email');
 let validValue = false;
 const messageContainer = document.getElementById('message-box');
 
 userEmail.addEventListener('input', (e) => {
-  let validEmailValue = e.target.value.toLowerCase();
+  const validEmailValue = e.target.value.toLowerCase();
   if (validEmailValue === e.target.value.toLowerCase()) {
     validValue = true;
   } else {
@@ -143,10 +142,8 @@ userEmail.addEventListener('input', (e) => {
 });
 
 userForm.addEventListener('submit', (e) => {
-  if (validValue) {
-    return;
-  } else {
-    let message = document.createElement('p');
+  if (!validValue) {
+    const message = document.createElement('p');
     message.innerText = 'Please fill your email properly';
     messageContainer.append(message);
     messageContainer.style.opacity = '1';
