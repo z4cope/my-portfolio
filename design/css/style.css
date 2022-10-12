@@ -274,6 +274,15 @@ nav {
   position: relative;
 }
 
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 #close-modal {
   position: absolute;
   right: 37px;
@@ -291,6 +300,7 @@ nav {
 .modal-details {
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -666,6 +676,10 @@ input:invalid {
     display: none;
   }
 
+  .modal-details {
+    flex-direction: row;
+  }
+
   #about-container {
     display: flex;
     padding: 142px 142px 0 142px;
@@ -702,8 +716,7 @@ input:invalid {
 
   .form-container {
     padding: 142px 320px;
-    background:
-      #6070ff
+    background: #6070ff
       url("../assets/contact\ form\ background\ shapes@2x.png");
     background-size: cover;
   }
