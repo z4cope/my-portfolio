@@ -1,27 +1,10 @@
+import data from "./cardsData.js";
+const worksSection = document.getElementById("works-container");
 const closeMenuBtn = document.getElementById("close-menu-btn");
 const navBar = document.getElementById("mobile_navbar");
 const toggleBtn = document.getElementById("toggle");
 let mobNavItems = document.getElementsByClassName("mob-nav-item");
 mobNavItems = Array.prototype.slice.call(mobNavItems);
-const projectCards = document.querySelectorAll(".project-card");
-const cards = [];
-
-for (let i = 0; i < projectCards.length; i++) {
-  const cardObject = {
-    name: projectCards[i].childNodes[5].childNodes[1],
-    projectDetails: projectCards[i].childNodes[5].childNodes[3],
-    description: projectCards[i].childNodes[5].childNodes[5],
-    desktopImage: projectCards[i].childNodes[3],
-    mobileImage: projectCards[i].childNodes[1],
-    techs: projectCards[i].childNodes[5].childNodes[7],
-    liveVersion: "https://z4cope.github.io/Mobile-portfolio/",
-    srcLink: "https://github.com/z4cope/Mobile-portfolio",
-  };
-  console.log(projectCards[i].childNodes[5].childNodes[3]);
-  cards.push(cardObject);
-}
-
-console.log(cards);
 
 toggleBtn.addEventListener("click", () => {
   navBar.style.transform = "translateX(0)";
@@ -34,5 +17,107 @@ closeMenuBtn.addEventListener("click", () => {
 mobNavItems.forEach((mobNavItem) => {
   mobNavItem.addEventListener("click", () => {
     navBar.style.transform = "translateX(-100%)";
+  });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  let mobImg = [];
+  let desktopImage = [];
+  let projectNames = [];
+  let projectInfo = [];
+  let projectDescriptions = [];
+  let projectSkills = [];
+  let response = data.map((res) => {
+    mobImg.push(res.mobileImg);
+    desktopImage.push(res.desktopImg);
+    projectNames.push(res.name);
+    projectInfo.push(res.project_info);
+    projectDescriptions.push(res.description);
+    projectSkills.push(res.project_skills);
+    return `<article class="project-card first-project">
+    <img
+      class="project-img mobile-img"
+      src="${res.mobileImg}"
+      alt="Snapshoot for the project image"
+    />
+    <img
+      class="project-img desktop-img"
+      src="${res.desktopImg}"
+      alt="Snapshoot for the project image"
+    />
+    <div class="works-content-container">
+      <h2 class="project-name">${res.name}</h2>
+      <div class="project-details">
+        <h3>${res.project_info[0]}</h3>
+        <img
+          src="./design/assets/Counter.svg"
+          alt="Decorative separator dot image"
+        />
+        <h3>${res.project_info[1]}</h3>
+        <img
+          src="./design/assets/Counter.svg"
+          alt="Decorative separator dot image"
+        />
+        <h3>${res.project_info[2]}</h3>
+      </div>
+      <p class="project-description">
+      ${res.description}
+      </p>
+      <ul class="project-used-techs">
+        <li>${res.project_skills[0]}</li>
+        <li>${res.project_skills[1]}</li>
+        <li>${res.project_skills[2]}</li>
+      </ul>
+      <button class="call-to-action-btns">${res.project_button}</button>
+    </div>
+  </article>`;
+  });
+
+  const projectCards = document.getElementsByClassName("project-card");
+  response = response.join("");
+  worksSection.innerHTML = response;
+
+  const modalContainer = document.createElement("div");
+  modalContainer.classList.add("modal-container");
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modalContainer.append(modal);
+  worksSection.append(modalContainer);
+  modalContainer.setAttribute("id", "modal-container");
+  console.log(projectInfo);
+
+  Array.prototype.slice.call(projectCards).forEach((eachCard, index) => {
+    const cardBtn = eachCard.childNodes[5].childNodes[9];
+
+    cardBtn.addEventListener("click", () => {
+      document.body.classList.add("stop-scrolling");
+      modalContainer.style.transform = "translateX(0)";
+      modal.innerHTML = `
+      <img id="close-modal" src="./design/assets/close-modal.svg" />
+      <h2 class="project-name">${projectNames[index]}</h2>
+      <div class="project-details">
+        <h3>${projectInfo[index][0]}</h3>
+        <img src="./design/assets/Counter.svg" alt="Decorative separator dot image">
+        <h3>${projectInfo[index][1]}</h3>
+        <img src="./design/assets/Counter.svg" alt="Decorative separator dot image">
+        <h3>${projectInfo[index][2]}</h3> 
+      </div>
+      <img class="modal-desktop-img" src="${desktopImage[index]}" />
+      <div class="modal-details">
+        <p>${projectDescriptions}</p>
+        <div>
+        <ul class="project-used-techs modal-used-techs">
+          <li>${projectSkills[index][0]}</li>
+          <li>${projectSkills[index][1]}</li>
+          <li>${projectSkills[index][2]}</li>
+        </ul>
+        <div class="see-more-btns">
+          <a onclick="window.open('https://z4cope.github.io/Mobile-portfolio/')" target="_blank" class="call-to-action-btns modal-btn">See live <img src="./design/assets/see-more.svg" /></a>
+          <a onclick="window.open('https://github.com/z4cope/Mobile-portfolio')" target="_blank" class="call-to-action-btns modal-btn">See Source <img src="./design/assets/github-link.svg" /></a>
+        </div>
+        </div>
+      </div>
+      `;
+    });
   });
 });
