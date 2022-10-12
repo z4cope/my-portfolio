@@ -126,3 +126,29 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+let userForm = document.getElementsByTagName("form");
+userForm = userForm[0];
+let userEmail = document.getElementById("user-email");
+let validValue = false;
+const messageContainer = document.getElementById("message-box");
+
+userEmail.addEventListener("input", (e) => {
+  let validEmailValue = e.target.value.toLowerCase();
+  if (validEmailValue === e.target.value.toLowerCase()) {
+    validValue = true;
+  } else {
+    validValue = false;
+  }
+});
+
+userForm.addEventListener("submit", (e) => {
+  if (validValue) {
+    return;
+  } else {
+    let message = document.createElement("p");
+    message.innerText = "Please fill your email properly";
+    messageContainer.append(message);
+    e.preventDefault();
+  }
+});
