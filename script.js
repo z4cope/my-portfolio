@@ -137,10 +137,8 @@ userEmail.addEventListener("input", (e) => {
   validEmailValue = e.target.value.toLowerCase();
   if (validEmailValue === e.target.value) {
     validValue = true;
-    console.log("true");
   } else {
     validValue = false;
-    console.log("false");
   }
 });
 
@@ -152,4 +150,23 @@ userForm.addEventListener("submit", (e) => {
     messageContainer.style.opacity = "1";
     e.preventDefault();
   }
+});
+
+const userFormData = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+userForm.elements.inputName.addEventListener("blur", () => {
+  userFormData.name = userForm.elements.inputName.value;
+});
+
+userForm.elements.inputEmail.addEventListener("blur", () => {
+  userFormData.email = userForm.elements.inputEmail.value;
+});
+
+userForm.elements.inputMessage.addEventListener("blur", () => {
+  userFormData.message = userForm.elements.inputMessage.value;
+  window.localStorage.setItem("userFormData", JSON.stringify(userFormData));
 });
