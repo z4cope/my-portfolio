@@ -533,6 +533,15 @@ input:invalid {
   transform: translateX(5px);
 }
 
+#message-box {
+  background-color: #172b4d;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 24px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
 @media screen and (min-width: 686px) {
   .burger-menu {
     display: none;
@@ -721,5 +730,9 @@ input:invalid {
 
   .contact-form {
     width: 447px;
+  }
+
+  #message-box {
+    color: #3265e5;
   }
 }

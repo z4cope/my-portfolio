@@ -126,3 +126,30 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const userForm = document.getElementsByTagName("form")[0];
+const userEmail = document.getElementById("user-email");
+let validValue = false;
+const messageContainer = document.getElementById("message-box");
+let validEmailValue;
+
+userEmail.addEventListener("input", (e) => {
+  validEmailValue = e.target.value.toLowerCase();
+  if (validEmailValue === e.target.value) {
+    validValue = true;
+    console.log("true");
+  } else {
+    validValue = false;
+    console.log("false");
+  }
+});
+
+userForm.addEventListener("submit", (e) => {
+  if (!validValue) {
+    const message = document.createElement("p");
+    message.innerText = "Please fill your email properly in lower case";
+    messageContainer.append(message);
+    messageContainer.style.opacity = "1";
+    e.preventDefault();
+  }
+});
