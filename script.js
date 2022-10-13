@@ -137,10 +137,8 @@ userEmail.addEventListener("input", (e) => {
   validEmailValue = e.target.value.toLowerCase();
   if (validEmailValue === e.target.value) {
     validValue = true;
-    console.log("true");
   } else {
     validValue = false;
-    console.log("false");
   }
 });
 
@@ -152,4 +150,37 @@ userForm.addEventListener("submit", (e) => {
     messageContainer.style.opacity = "1";
     e.preventDefault();
   }
+});
+
+userForm.elements.inputName.value = JSON.parse(
+  window.localStorage.getItem("userFormData")
+).name;
+
+userForm.elements.inputEmail.value = JSON.parse(
+  window.localStorage.getItem("userFormData")
+).email;
+
+userForm.elements.inputMessage.value = JSON.parse(
+  window.localStorage.getItem("userFormData")
+).message;
+
+const userFormData = {
+  name: userForm.elements.inputName.value,
+  email: userForm.elements.inputEmail.value,
+  message: userForm.elements.inputMessage.value,
+};
+
+userForm.elements.inputName.addEventListener("keyup", () => {
+  userFormData.name = userForm.elements.inputName.value;
+  window.localStorage.setItem("userFormData", JSON.stringify(userFormData));
+});
+
+userForm.elements.inputEmail.addEventListener("keyup", () => {
+  userFormData.email = userForm.elements.inputEmail.value;
+  window.localStorage.setItem("userFormData", JSON.stringify(userFormData));
+});
+
+userForm.elements.inputMessage.addEventListener("keyup", () => {
+  userFormData.message = userForm.elements.inputMessage.value;
+  window.localStorage.setItem("userFormData", JSON.stringify(userFormData));
 });
