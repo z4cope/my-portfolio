@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -24,6 +28,11 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Header styles */
@@ -235,6 +244,92 @@ nav {
 .project-used-techs {
   display: flex;
   gap: 6px;
+}
+
+#modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(38, 38, 38, 0.9);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  overflow: scroll;
+}
+
+.modal {
+  background: #fff;
+  width: 80%;
+  height: 80%;
+  border: 1px solid #dfe1e6;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  padding: 24px;
+  position: relative;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+#close-modal {
+  position: absolute;
+  right: 37px;
+  top: 37px;
+  cursor: pointer;
+}
+
+.modal-desktop-img {
+  height: 586px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 28px 0 59px 0;
+}
+
+.modal-details {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal-details p {
+  flex: 1 1 0;
+}
+
+.modal-used-techs {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1 1 0;
+}
+
+.see-more-btns {
+  border-top: 1px solid #ebecf0;
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.modal-btn {
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+}
+
+.modal-btn:hover {
+  background-color: transparent !important;
+  color: #396df2 !important;
+  cursor: pointer;
+  transform: translateY(-0.3rem);
 }
 
 .call-to-action-btns {
@@ -576,6 +671,10 @@ input:invalid {
 
   .mobile-img {
     display: none;
+  }
+
+  .modal-details {
+    flex-direction: row;
   }
 
   #about-container {
